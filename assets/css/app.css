@@ -1,0 +1,36 @@
+/* .fix-bottom {
+  background-color: antiquewhite;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.fix-bottom .row {
+	margin: 0;
+}
+
+.fix-bottom textarea {
+	margin-bottom: 0;
+} */
+
+.css-form input.ng-invalid.ng-touched {
+    background-color: #FA787E;
+  }
+
+.css-form input.ng-valid.ng-touched {
+    background-color: #78FA89;
+}
+
+.padd-box {
+	padding: 2em 1.5em
+}
+
+.minc {
+	  margin-top: 25vh;
+}
+
+.bg  {
+	background: url(../img/bg.jpg) 50% 50%/cover no-repeat;
+	height: 75vh;
+}

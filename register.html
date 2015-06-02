@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+  <html ng-app="freeChat">
+    <head>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="assets/css/app.css"  media="screen,projection"/>
+      <title>Register | FreeChat</title>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+      <script type="text/javascript" src="assets/js/angular.min.js"></script>
+      <!-- Firebase -->
+      <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+      <!-- AngularFire -->
+      <script src="https://cdn.firebase.com/libs/angularfire/1.1.1/angularfire.min.js"></script>
+    </head>
+
+    <body ng-controller="usercontroller as user" class="grey lighten-5 bg">
+
+      <div class="container">
+
+        <div class="minc">
+          <div class="row">
+
+            <form name="reg" class="col s6 offset-s3 center-align card z-depth-3">
+              <div class="padd-box">
+                <h3>Register Now</h3>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" ng-model="user.userEamil" required="" type="email" class="validate">
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="password" ng-model="user.userPassword" required="password" ng-minlength="6" type="password" class="validate">
+                    <label for="password">Password</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <button class="btn waves-effect waves-light" ng-click="user.create()" ng-disabled="reg.$invalid" type="submit" name="action">Register
+                    <i class="mdi-file-folder-shared left"></i>
+                  </button>              
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>    
+
+      </div><!-- container -->
+
+     
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="assets/js/freechat.js"></script>
+      <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+    </body>
+  </html>
+        
+
