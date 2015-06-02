@@ -24,18 +24,18 @@
         <div class="minc">
           <div class="row">
 
-            <form name="reg" class="col s6 offset-s3 center-align card z-depth-3">
+            <form name="reg" class="col s12 m8 offset-m2 l6 offset-l3  center-align card z-depth-3">
               <div class="padd-box">
-                <h3>Register Now</h3>
+                <h4 class="flow-text">Register Now</h4>
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="email" ng-model="user.userEamil" required="" type="email" class="validate">
+                    <input id="email" ng-model="user.userEamil" required type="email" class="validate">
                     <label for="email">Email</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
-                    <input id="password" ng-model="user.userPassword" required="password" ng-minlength="6" type="password" class="validate">
+                    <input id="password" ng-model="user.userPassword" required ng-minlength="6" type="password" class="validate">
                     <label for="password">Password</label>
                   </div>
                 </div>
