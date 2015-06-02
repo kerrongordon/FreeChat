@@ -16,10 +16,14 @@
 
 .css-form input.ng-invalid.ng-touched {
     background-color: #FA787E;
+    border-bottom: 1px solid #FA787E;
+    box-shadow: 0 1px 0 0 #FA787E;
   }
 
-.css-form input.ng-valid.ng-touched {
+.css-form input.ng-valid.ng-touched, .valid {
     background-color: #78FA89;
+    border-bottom: 1px solid #78FA89;
+    box-shadow: 0 1px 0 0 #78FA89;
 }
 
 .padd-box {
@@ -32,5 +36,6 @@
 
 .bg  {
 	background: url(../img/bg.jpg) 50% 50%/cover no-repeat;
-	height: 75vh;
+	height: 100vh;
+	overflow: hidden;
 }
