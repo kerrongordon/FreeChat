@@ -3,6 +3,7 @@
     <head>
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="assets/css/app.css"  media="screen,projection"/>
       <title>FreeChat</title>
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
@@ -17,27 +18,79 @@
     </head>
 
     <body ng-controller="chatController as Data" class="grey lighten-5">
+
+
+    <!-- Navbar goes here -->
+
+    <!-- Page Layout here -->
+    <div class="row">
+
+      <div class="col s12 m4 l3">
+        <ul class="collection">
+          <li class="collection-item avatar">
+            <i class="mdi-file-folder circle"></i>
+            <span class="title">Title</span>
+            <p>First Line <br>
+               Second Line
+            </p>
+            <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+          </li>
+          <li class="collection-item avatar">
+            <i class="mdi-action-assessment circle green"></i>
+            <span class="title">Title</span>
+            <p>First Line <br>
+               Second Line
+            </p>
+            <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+          </li>
+          <li class="collection-item avatar">
+            <i class="mdi-av-play-arrow circle red"></i>
+            <span class="title">Title</span>
+            <p>First Line <br>
+               Second Line
+            </p>
+            <a href="#!" class="secondary-content"><i class="mdi-action-grade"></i></a>
+          </li>
+        </ul>       
+      </div>
+
+      <div class="col s12 m8 l9">
+
+        <ul class="collection with-header" ng-repeat="List in Data.messageList">
+          <li class="collection-item">{{List.Message}}</li>
+        </ul>
+          
+          <div class="fix-bottom">
+          <div class="row">
+            <form name="frm" class="col s12">
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="mdi-editor-mode-edit prefix"></i>
+                  <textarea id="icon_prefix2" ng-model="Data.message" ng-minlength="2" required="string" class="materialize-textarea"></textarea>
+                  <label for="icon_prefix2">Message</label>
+                  <button class="btn waves-effect waves-light right" ng-disabled="frm.$invalid" ng-click="Data.sendMessage()">Submit
+                      <i class="mdi-content-send right"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div> 
+          </div>
+
+      </div>
+
+      <button ng-click="Data.logInFacebook()" class="btn waves-effect waves-light">login</button>
+
+    </div>
+
+
+
+
     <div class="container">
 
-      <ul class="collection with-header" ng-repeat="List in Data.messageList">
-        <li class="collection-item">{{List.Message}}</li>
-      </ul>
+      
 
-      <div class="row">
-        <form name="frm" class="col s12">
-          <div class="row">
-            <div class="input-field col s12">
-              <i class="mdi-editor-mode-edit prefix"></i>
-              <textarea id="icon_prefix2" ng-model="Data.message" ng-minlength="2" required="string" class="materialize-textarea"></textarea>
-              <label for="icon_prefix2">Message</label>
-              <button class="btn waves-effect waves-light right" ng-disabled="frm.$invalid" ng-click="Data.sendMessage()">Submit
-                  <i class="mdi-content-send right"></i>
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-       
+      
 
       </div>
       <!--Import jQuery before materialize.js-->
